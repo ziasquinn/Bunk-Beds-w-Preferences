@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Bunk Beds</name>
+	<author>Darknote</author>
+	<url/>
+	<supportedVersions>
+		<li>1.4</li>
+	</supportedVersions>
+	<packageId>Darknote.BunkBeds</packageId>
+	<description>The mod adds two bunk beds.</description>
+</ModMetaData>
