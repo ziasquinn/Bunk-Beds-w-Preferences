@@ -8,10 +8,9 @@ namespace BunkBeds
     [HotSwappable]
     public class CompProperties_BunkBed : CompProperties
     {
-        public GraphicData bedTopGraphicData;
+        public List<GraphicData> bedTopGraphicDatas;
 
         public int pawnCount;
-
         public override void DrawGhost(IntVec3 center, Rot4 rot, ThingDef thingDef, Color ghostCol, AltitudeLayer drawAltitude, Thing thing = null)
         {
             for (var i = 1; i < pawnCount; i++)
@@ -33,7 +32,7 @@ namespace BunkBeds
                 {
                     drawPos.z -= 0.5f;
                 }
-                GhostUtility.GhostGraphicFor(bedTopGraphicData.Graphic, thingDef, ghostCol).DrawFromDef(drawPos, rot, thingDef);
+                GhostUtility.GhostGraphicFor(bedTopGraphicDatas[i - 1].Graphic, thingDef, ghostCol).DrawFromDef(drawPos, rot, thingDef);
             }
         }
         public CompProperties_BunkBed()
@@ -49,8 +48,7 @@ namespace BunkBeds
         public CompProperties_BunkBed Props => props as CompProperties_BunkBed;
         public int BunkBedLevel => Props.pawnCount - 1;
 
-        [Unsaved(false)]
-        private Graphic bedTopGraphic;
+        public List<Graphic> topGraphics;
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
@@ -59,14 +57,19 @@ namespace BunkBeds
         public override void PostDraw()
         {
             base.PostDraw();
-            if (bedTopGraphic is null)
+            if (topGraphics is null)
             {
-                bedTopGraphic = Props.bedTopGraphicData.GraphicColoredFor(this.parent);
+                topGraphics = new List<Graphic>();
+                foreach (var graphicData in Props.bedTopGraphicDatas)
+                {
+                    topGraphics.Add(graphicData.GraphicColoredFor(this.parent));
+                }
             }
+
             for (var i = 1; i < BunkBedLevel + 1; i++)
             {
                 var drawPos = GetDrawOffsetForBunkBeds(this.parent.Rotation, i, this.parent.DrawPos);
-                bedTopGraphic.Draw(drawPos, parent.Rotation, parent);
+                topGraphics[i - 1].Draw(drawPos, parent.Rotation, parent);
             }
         }
 

@@ -39,15 +39,17 @@
     <costStuffCount>85</costStuffCount>
 	<comps>
 		<li Class="BunkBeds.CompProperties_BunkBed">
-			<bedTopGraphicData>
-				<texPath>Things/Building/Furniture/Bed/Bedtop</texPath>
-				<graphicClass>Graphic_Multi</graphicClass>
-				<shaderType>CutoutComplex</shaderType>
-				<drawSize>(1.65,2)</drawSize>
-				<damageData>
-					<rect>(0,0.05,2,1.95)</rect>
-				</damageData>
-			</bedTopGraphicData>
+			<bedTopGraphicDatas>
+				<li>
+					<texPath>Things/Building/Furniture/Bed/Bedtop</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<shaderType>CutoutComplex</shaderType>
+					<drawSize>(1.65,2)</drawSize>
+					<damageData>
+						<rect>(0,0.05,2,1.95)</rect>
+					</damageData>
+				</li>
+			</bedTopGraphicDatas>
 			<pawnCount>2</pawnCount>
 		</li>
 	</comps>
@@ -70,15 +72,26 @@
     <costStuffCount>120</costStuffCount>
 	<comps>
 		<li Class="BunkBeds.CompProperties_BunkBed">
-			<bedTopGraphicData>
-				<texPath>Things/Building/Furniture/Bed/Bedtop</texPath>
-				<graphicClass>Graphic_Multi</graphicClass>
-				<shaderType>CutoutComplex</shaderType>
-				<drawSize>(1.65,2)</drawSize>
-				<damageData>
-					<rect>(0,0.05,2,1.95)</rect>
-				</damageData>
-			</bedTopGraphicData>
+			<bedTopGraphicDatas>
+				<li>
+					<texPath>Things/Building/Furniture/Bed/Bedtop</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<shaderType>CutoutComplex</shaderType>
+					<drawSize>(1.65,2)</drawSize>
+					<damageData>
+						<rect>(0,0.05,2,1.95)</rect>
+					</damageData>
+				</li>
+				<li>
+					<texPath>Things/Building/Furniture/Bed/Bedtop2</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<shaderType>CutoutComplex</shaderType>
+					<drawSize>(1.65,2)</drawSize>
+					<damageData>
+						<rect>(0,0.05,2,1.95)</rect>
+					</damageData>
+				</li>
+			</bedTopGraphicDatas>
 			<pawnCount>3</pawnCount>
 		</li>
 	</comps>
