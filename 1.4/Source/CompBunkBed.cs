@@ -82,12 +82,12 @@ namespace BunkBeds
                 {
                     case 1:
                         {
-                            drawPos += new Vector3(0, 0, 0.25f);
+                            drawPos += new Vector3(0, 0, 0.0f);
                             break;
                         }
                     case 2:
                         {
-                            drawPos += new Vector3(0, 0, 1f);
+                            drawPos += new Vector3(0, 0, 0.75f);
                             break;
                         }
                 }
@@ -120,12 +120,12 @@ namespace BunkBeds
                 {
                     case 1:
                         {
-                            drawPos += new Vector3(0, 0, 0.5f);
+                            drawPos += new Vector3(0, 0, 0.0f);
                             break;
                         }
                     case 2:
                         {
-                            drawPos += new Vector3(0, 0, 0.75f);
+                            drawPos += new Vector3(0, 0, 0.9f);
                             break;
                         }
                 }
@@ -141,7 +141,7 @@ namespace BunkBeds
                         }
                     case 2:
                         {
-                            drawPos += new Vector3(0, 0, 1f);
+                            drawPos += new Vector3(0, 0, 1.25f);
                             break;
                         }
                 }
@@ -211,7 +211,7 @@ namespace BunkBeds
                 {
                     case 0:
                         {
-                            drawPos += new Vector3(0, 0, -0.6f);
+                            drawPos += new Vector3(0, 0, -0.7f);
                             break;
                         }
                     case 1:
@@ -221,7 +221,7 @@ namespace BunkBeds
                         }
                     case 2:
                         {
-                            drawPos += new Vector3(0, 0, 0.4f);
+                            drawPos += new Vector3(0, 0, 0.55f);
                             break;
                         }
                 }
