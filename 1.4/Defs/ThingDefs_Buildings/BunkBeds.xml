@@ -30,7 +30,7 @@
       <texPath>Things/Building/Furniture/Bed/Bedbottom</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
-      <drawSize>(1.65,2)</drawSize>
+      <drawSize>(2,2)</drawSize>
       <damageData>
         <rect>(0,0.05,2,1.95)</rect>
       </damageData>
@@ -44,7 +44,7 @@
 					<texPath>Things/Building/Furniture/Bed/Bedtop</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<shaderType>CutoutComplex</shaderType>
-					<drawSize>(1.65,2)</drawSize>
+					<drawSize>(2,2)</drawSize>
 					<damageData>
 						<rect>(0,0.05,2,1.95)</rect>
 					</damageData>
@@ -63,7 +63,7 @@
       <texPath>Things/Building/Furniture/Bed/Bedbottom</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
-      <drawSize>(1.65,2)</drawSize>
+      <drawSize>(2,2)</drawSize>
       <damageData>
         <rect>(0,0.05,2,1.95)</rect>
       </damageData>
@@ -77,7 +77,7 @@
 					<texPath>Things/Building/Furniture/Bed/Bedtop</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<shaderType>CutoutComplex</shaderType>
-					<drawSize>(1.65,2)</drawSize>
+					<drawSize>(2,2)</drawSize>
 					<damageData>
 						<rect>(0,0.05,2,1.95)</rect>
 					</damageData>
@@ -86,7 +86,7 @@
 					<texPath>Things/Building/Furniture/Bed/Bedtop2</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<shaderType>CutoutComplex</shaderType>
-					<drawSize>(1.65,2)</drawSize>
+					<drawSize>(2,2)</drawSize>
 					<damageData>
 						<rect>(0,0.05,2,1.95)</rect>
 					</damageData>
