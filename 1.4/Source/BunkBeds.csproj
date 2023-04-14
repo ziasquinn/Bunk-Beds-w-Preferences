@@ -69,6 +69,10 @@
     <Compile Include="Building_Bed_GetSleepingSlotPos_Patch.cs" />
     <Compile Include="Building_Bed_SleepingSlotsCount_Patch.cs" />
     <Compile Include="JobGiver_DoLovin_TryGiveJob_Patch.cs" />
+    <Compile Include="LovePartnerRelationUtility_GetMostDislikedNonPartnerBedOwner_Patch.cs" />
+    <Compile Include="BunkBedsMod.cs" />
+    <Compile Include="BunkBedsSettings.cs" />
+    <Compile Include="RoomRoleWorker_Bedroom_IsBedroomHelper_Patch.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="CompAssignableToPawn_Bed_IdeoligionForbids_Patch.cs" />
     <Compile Include="CompBunkBed.cs" />

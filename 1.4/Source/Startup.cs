@@ -7,13 +7,6 @@ using Verse;
 
 namespace BunkBeds
 {
-    public class BunkBedsMod : Mod
-    {
-        public BunkBedsMod(ModContentPack content) : base(content)
-        {
-            new Harmony("BunkBedsMod").PatchAll();
-        }
-    }
     [StaticConstructorOnStartup]
     public static class Utils
     {
