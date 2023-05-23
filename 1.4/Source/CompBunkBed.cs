@@ -73,6 +73,8 @@ namespace BunkBeds
             }
         }
 
+        [TweakValue("0BunkBed", -2, 2)] public static float zOffset1 = 0;
+        [TweakValue("0BunkBed", -2, 2)] public static float zOffset2 = 0;
         public static Vector3 GetDrawOffsetForBunkBeds(Rot4 rotation, int bunkLevel, Vector3 drawPos)
         {
             drawPos.y += 1 + bunkLevel;
@@ -82,12 +84,12 @@ namespace BunkBeds
                 {
                     case 1:
                         {
-                            drawPos += new Vector3(0, 0, 0.0f);
+                            drawPos += new Vector3(0, 0, -0.365f);
                             break;
                         }
                     case 2:
                         {
-                            drawPos += new Vector3(0, 0, 0.75f);
+                            drawPos += new Vector3(0, 0, 0.365f);
                             break;
                         }
                 }

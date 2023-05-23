@@ -1,5 +1,6 @@
 ﻿using HarmonyLib;
 using RimWorld;
+using Verse.AI;
 
 namespace BunkBeds
 {
@@ -16,6 +17,4 @@ namespace BunkBeds
             BedUtility_GetSleepingSlotsCount_Patch.compBunkBed = null;
         }
     }
-
-
 }

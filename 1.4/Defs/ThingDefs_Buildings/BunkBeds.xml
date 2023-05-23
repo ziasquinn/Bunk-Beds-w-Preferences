@@ -65,6 +65,7 @@
       <graphicClass>Graphic_Multi</graphicClass>
       <shaderType>CutoutComplex</shaderType>
       <drawSize>(2,2)</drawSize>
+      <drawOffset>(0, 0, 0.31)</drawOffset>
       <damageData>
         <rect>(0,0.05,2,1.95)</rect>
       </damageData>
@@ -78,7 +79,8 @@
 					<texPath>Things/Building/Furniture/Bed/Bedtop</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<shaderType>CutoutComplex</shaderType>
-					<drawSize>(2,2)</drawSize>
+					<drawSize>(2,2.8)</drawSize>
+					<drawOffset>(0, 0, 0.31)</drawOffset>
 					<damageData>
 						<rect>(0,0.05,2,1.95)</rect>
 					</damageData>
@@ -88,6 +90,7 @@
 					<graphicClass>Graphic_Multi</graphicClass>
 					<shaderType>CutoutComplex</shaderType>
 					<drawSize>(2,2)</drawSize>
+					<drawOffset>(0, 0, 0.31)</drawOffset>
 					<damageData>
 						<rect>(0,0.05,2,1.95)</rect>
 					</damageData>
