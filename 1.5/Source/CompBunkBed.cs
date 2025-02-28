@@ -57,7 +57,25 @@ namespace BunkBeds
         public override void PostDraw()
         {
             base.PostDraw();
+            bool needsRebuild = false;
             if (topGraphics is null)
+            {
+                needsRebuild = true;
+            }
+            else
+            {
+                for (var i = 0; i < topGraphics.Count; i++)
+                {
+                    if (topGraphics[i].color != this.parent.DrawColor 
+                        || topGraphics[i].colorTwo != this.parent.DrawColorTwo)
+                    {
+                        needsRebuild = true;
+                        break;
+                    }
+                }
+            }
+
+            if (needsRebuild)
             {
                 topGraphics = new List<Graphic>();
                 foreach (var graphicData in Props.bedTopGraphicDatas)
@@ -174,7 +192,7 @@ namespace BunkBeds
                 return;
             }
             Color defaultThingLabelColor = GenMapUI.DefaultThingLabelColor;
-            if (!bed.OwnersForReading.Any() && (Building_Bed_DrawGUIOverlay_Patch.guestBedType is null 
+            if (!bed.OwnersForReading.Any() && (Building_Bed_DrawGUIOverlay_Patch.guestBedType is null
                 || Building_Bed_DrawGUIOverlay_Patch.guestBedType.IsAssignableFrom(this.parent.def.thingClass) is false))
             {
                 GenMapUI.DrawThingLabel(bed, "Unowned".Translate(), defaultThingLabelColor);
