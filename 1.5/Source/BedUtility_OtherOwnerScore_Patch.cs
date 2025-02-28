@@ -8,10 +8,10 @@ namespace BunkBeds
     [HarmonyPatch]
     public static class BedUtility_OtherOwnerScore_Patch
     {
-        // Target the method dynamically by name, allowing the patch to only apply if the method exists
+        public static bool Prepare() => ModsConfig.IsActive("Orion.Hospitality") && TargetMethod() != null;
+
         static MethodBase TargetMethod()
         {
-            // Attempt to find the method in the mod's BedUtility class
             var bedUtilityType = AccessTools.TypeByName("Hospitality.Utilities.BedUtility");
             if (bedUtilityType != null)
             {
@@ -22,11 +22,9 @@ namespace BunkBeds
                 }
             }
 
-            Log.Warning("Hospitality.Utilities.BedUtility.OtherOwnerScore method not found. Patch not applied.");
-            return null;  // Return null to prevent patching if the method is not found
+            return null;
         }
 
-        // This prefix will only run if the TargetMethod finds the method
         public static bool Prefix(Building_Bed bed, Pawn guest, ref int __result)
         {
             // Check if the bed is a bunk bed
