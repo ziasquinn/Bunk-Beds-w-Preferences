@@ -1,6 +1,9 @@
-﻿using HarmonyLib;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
+using HarmonyLib;
 using RimWorld;
 using System.Reflection;
+using System.Threading;
 using Verse;
 
 namespace BunkBeds
@@ -8,16 +11,14 @@ namespace BunkBeds
     [HarmonyPatch(typeof(BedUtility), "GetSleepingSlotsCount")]
     public static class BedUtility_GetSleepingSlotsCount_Patch
     {
-        public static CompBunkBed compBunkBed;
+        public static ConcurrentDictionary<int, CompBunkBed> dictBunkBedComps = new();
+
         public static bool Prefix(ref int __result)
         {
-            if (compBunkBed != null)
-            {
-                __result = compBunkBed.Props.pawnCount;
-                return false;
-            }
-            return true;
-        } 
+            if (dictBunkBedComps.GetValueOrDefault(Thread.CurrentThread.ManagedThreadId, null) == null)
+                return true;
+            __result = dictBunkBedComps[Thread.CurrentThread.ManagedThreadId].Props.pawnCount;
+            return false;
+        }
     }
-
 }

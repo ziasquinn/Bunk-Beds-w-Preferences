@@ -1,6 +1,7 @@
-﻿using HarmonyLib;
+using HarmonyLib;
 using RimWorld;
 
+using System.Threading;
 namespace BunkBeds
 {
     [HarmonyPatch(typeof(Building_Bed), "GetSleepingSlotPos")]
@@ -8,13 +9,12 @@ namespace BunkBeds
     {
         public static void Prefix(Building_Bed __instance)
         {
-            BedUtility_GetSleepingSlotsCount_Patch.compBunkBed = __instance.GetComp<CompBunkBed>();
+            BedUtility_GetSleepingSlotsCount_Patch.dictBunkBedComps[Thread.CurrentThread.ManagedThreadId] = __instance.GetComp<CompBunkBed>();
         }
 
         public static void Postfix()
         {
-            BedUtility_GetSleepingSlotsCount_Patch.compBunkBed = null;
+            BedUtility_GetSleepingSlotsCount_Patch.dictBunkBedComps[Thread.CurrentThread.ManagedThreadId] = null;
         }
     }
-
 }
