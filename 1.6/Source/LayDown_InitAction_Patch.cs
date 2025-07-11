@@ -1,7 +1,4 @@
-using HarmonyLib;
-using RimWorld;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Reflection.Emit;
@@ -9,6 +6,11 @@ using Verse;
 
 namespace BunkBeds
 {
+    using HarmonyLib;
+    using RimWorld;
+    using System.Collections.Generic;
+    using Verse;
+
     [HarmonyPatch]
     public static class LayDown_InitAction_Patch
     {
